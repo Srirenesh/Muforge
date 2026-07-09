@@ -7,7 +7,16 @@ import { Button } from "@/components/ui/button";
 export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Message sent successfully! We will get back to you within 24 hours.");
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get("firstName") || "";
+    const lastName = formData.get("lastName") || "";
+    const email = formData.get("email") || "";
+    const message = formData.get("message") || "";
+
+    const subject = encodeURIComponent(`MuForge Inquiry from ${firstName} ${lastName}`);
+    const body = encodeURIComponent(`Inquiry Details:\n\nName: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+    window.location.href = `mailto:muforgetech@gmail.com?subject=${subject}&body=${body}`;
     e.currentTarget.reset();
   };
 
@@ -82,6 +91,8 @@ export default function ContactPage() {
                   <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">First Name</label>
                   <input
                     type="text"
+                    name="firstName"
+                    required
                     className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                     placeholder="John"
                   />
@@ -90,6 +101,8 @@ export default function ContactPage() {
                   <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">Last Name</label>
                   <input
                     type="text"
+                    name="lastName"
+                    required
                     className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                     placeholder="Doe"
                   />
@@ -100,6 +113,8 @@ export default function ContactPage() {
                 <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">Email Address</label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                   placeholder="john@example.com"
                 />
@@ -109,6 +124,8 @@ export default function ContactPage() {
                 <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">Message</label>
                 <textarea
                   rows={4}
+                  name="message"
+                  required
                   className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                   placeholder="How can we help you?"
                 />
