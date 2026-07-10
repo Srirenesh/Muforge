@@ -70,7 +70,7 @@ export function Navbar() {
                 width={200}
                 height={80}
                 priority
-                className="h-16 md:h-20 w-auto object-contain scale-125 md:scale-150 origin-left transition-transform" 
+                className="h-16 md:h-20 w-auto object-contain transition-transform" 
               />
             </Link>
           </div>
