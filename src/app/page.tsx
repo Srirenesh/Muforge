@@ -43,13 +43,13 @@ export default function Home() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
             whileHover={{ scale: 1.05 }}
-            className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8 flex items-center justify-center cursor-pointer"
+            className="relative w-64 h-64 md:w-80 md:h-80 mx-auto mb-8 flex items-center justify-center cursor-pointer"
           >
             <Image
               src="/logo.png"
               alt="MuForge Logo"
               fill
-              sizes="(max-width: 768px) 192px, 256px"
+              sizes="(max-width: 768px) 256px, 320px"
               className="object-contain relative z-10"
             />
           </motion.div>
