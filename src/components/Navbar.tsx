@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -20,9 +21,9 @@ export function Navbar() {
     // Initial theme check
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
+      setTimeout(() => {
+        setTheme("light");
+      }, 0);
     }
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -63,9 +64,12 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="MuForge Logo" 
+                width={200}
+                height={80}
+                priority
                 className="h-16 md:h-20 w-auto object-contain scale-125 md:scale-150 origin-left transition-transform dark:brightness-0 dark:invert dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" 
               />
             </Link>

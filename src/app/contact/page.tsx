@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
@@ -93,7 +93,7 @@ export default function ContactPage() {
                     type="text"
                     name="firstName"
                     required
-                    className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                    className="w-full bg-slate-100/50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                     placeholder="John"
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                     type="text"
                     name="lastName"
                     required
-                    className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                    className="w-full bg-slate-100/50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                     placeholder="Doe"
                   />
                 </div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   type="email"
                   name="email"
                   required
-                  className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                  className="w-full bg-slate-100/50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                   placeholder="john@example.com"
                 />
               </div>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   rows={4}
                   name="message"
                   required
-                  className="w-full bg-slate-55 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                  className="w-full bg-slate-100/50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 transition-colors"
                   placeholder="How can we help you?"
                 />
               </div>

@@ -1,16 +1,20 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
-// @ts-ignore
+// @ts-expect-error - maath package lacks official type definitions
 import * as random from "maath/random/dist/maath-random.esm";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Starfield(props: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>(null);
   
   // Generate random points in a sphere (must be multiple of 3)
-  const sphere = random.inSphere(new Float32Array(5001), { radius: 1.5 });
+  const sphere = useMemo(() => {
+    return random.inSphere(new Float32Array(5001), { radius: 1.5 });
+  }, []);
 
   useFrame((state, delta) => {
     if (ref.current) {

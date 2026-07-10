@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Background3D } from "@/components/Background3D";
 import { PieChart, GraduationCap, Globe, Megaphone, Camera, BookOpen, Terminal, Video, Briefcase, Package, Factory, Receipt, Phone, Mail, X, ExternalLink } from "lucide-react";
@@ -44,10 +45,12 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8 flex items-center justify-center cursor-pointer"
           >
-            <img
+            <Image
               src="/logo.png"
               alt="MuForge Logo"
-              className="w-full h-full object-contain relative z-10 dark:brightness-0 dark:invert dark:drop-shadow-[0_0_35px_rgba(6,182,212,0.6)]"
+              fill
+              sizes="(max-width: 768px) 192px, 256px"
+              className="object-contain relative z-10 dark:brightness-0 dark:invert dark:drop-shadow-[0_0_35px_rgba(6,182,212,0.6)]"
             />
           </motion.div>
 
@@ -91,7 +94,13 @@ export default function Home() {
 
             <div className="w-full max-w-5xl mx-auto h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 mb-16 relative group">
               <div className="absolute inset-0 bg-cyan-500/5 dark:bg-cyan-500/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-              <img src="/images/services_hero.png" alt="MuForge Services" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image 
+                src="/images/services_hero.png" 
+                alt="MuForge Services" 
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-cover group-hover:scale-105 transition-transform duration-700" 
+              />
             </div>
           </div>
 
@@ -174,10 +183,12 @@ export default function Home() {
                   className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/40 backdrop-blur-md hover:border-cyan-500/50 hover:bg-slate-50 dark:hover:bg-slate-950/60 transition-all flex flex-col cursor-pointer group shadow-xl"
                 >
                   <div className="h-48 relative overflow-hidden">
-                    <img
+                    <Image
                       src={proj.img}
                       alt={proj.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
                   </div>
@@ -200,7 +211,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Ready to Transform Your Business?</h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto">
             Join the forward-thinking enterprises that trust MuForge to architect their digital future.
-            Let's build something extraordinary together.
+            Let&apos;s build something extraordinary together.
           </p>
           <Button onClick={() => setIsModalOpen(true)} size="lg" className="bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold px-10 h-14 rounded-full text-lg shadow-xl transition-transform hover:scale-105 cursor-pointer">
             Contact Our Experts
@@ -227,11 +238,13 @@ export default function Home() {
               </button>
 
               <div className="relative w-28 h-28 mx-auto mb-5 rounded-full p-1 bg-gradient-to-tr from-cyan-500 to-blue-600 shadow-lg">
-                <div className="w-full h-full rounded-full overflow-hidden border-2 border-white dark:border-slate-900">
-                  <img 
+                <div className="w-full h-full rounded-full overflow-hidden border-2 border-white dark:border-slate-900 relative">
+                  <Image 
                     src="/images/tharun.jpg" 
                     alt="Tharun U" 
-                    className="w-full h-full object-cover" 
+                    fill
+                    sizes="112px"
+                    className="object-cover" 
                   />
                 </div>
                 <div className="absolute inset-0 -m-1 rounded-full border border-cyan-500/30 animate-ping opacity-60 pointer-events-none" />
@@ -245,7 +258,7 @@ export default function Home() {
                   href="https://wa.me/919790261693" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-2xl border border-slate-150 dark:border-slate-800 bg-slate-55 dark:bg-slate-950/40 hover:border-cyan-500/50 hover:bg-slate-100 dark:hover:bg-slate-950 transition-colors group cursor-pointer"
+                  className="flex items-center justify-between p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950/40 hover:border-cyan-500/50 hover:bg-slate-100 dark:hover:bg-slate-950 transition-colors group cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-500 shrink-0">
@@ -263,7 +276,7 @@ export default function Home() {
                   href="mailto:muforgetech@gmail.com" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-2xl border border-slate-150 dark:border-slate-800 bg-slate-55 dark:bg-slate-950/40 hover:border-cyan-500/50 hover:bg-slate-100 dark:hover:bg-slate-950 transition-colors group cursor-pointer"
+                  className="flex items-center justify-between p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950/40 hover:border-cyan-500/50 hover:bg-slate-100 dark:hover:bg-slate-950 transition-colors group cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 shrink-0">

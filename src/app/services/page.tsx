@@ -81,6 +81,7 @@ export default function ServicesPage() {
           src="/images/services_hero.png"
           alt="MuForge Digital Services & Innovation"
           fill
+          sizes="100vw"
           className="object-cover opacity-10 dark:opacity-20"
           priority
         />
@@ -149,7 +150,7 @@ export default function ServicesPage() {
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6 relative z-10 text-slate-900 dark:text-white">Have a custom requirement?</h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto relative z-10">
-            Let's design a custom package or solution that perfectly aligns with your goals. Our team is ready to deliver.
+            Let&apos;s design a custom package or solution that perfectly aligns with your goals. Our team is ready to deliver.
           </p>
           <Link href="/contact" className="relative z-10 inline-block">
             <Button size="lg" className="bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold px-10 h-14 rounded-full text-lg shadow-xl transition-transform hover:scale-105 relative z-10 cursor-pointer">

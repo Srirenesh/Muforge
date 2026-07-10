@@ -22,6 +22,7 @@ export default function AboutPage() {
           src="/images/about-hero.png"
           alt="MuForge Technology Innovation"
           fill
+          sizes="100vw"
           className="object-cover opacity-10 dark:opacity-30"
           priority
         />
@@ -60,7 +61,7 @@ export default function AboutPage() {
                 Our expertise includes Data Analytics, Custom Software Development, Website Development, Mobile Applications, Digital Marketing, UI/UX Design, Business Dashboards, ERP & CRM Solutions, AI-powered Applications, and Technical Training. We also support academic innovation through Final Year Project development and mentoring.
               </p>
               <p>
-                At MuForge, we believe technology should be simple, scalable, and result-driven. Every solution is designed to meet our clients' unique business needs while maintaining high standards of quality, security, and performance.
+                At MuForge, we believe technology should be simple, scalable, and result-driven. Every solution is designed to meet our clients&apos; unique business needs while maintaining high standards of quality, security, and performance.
               </p>
             </div>
           </motion.div>
@@ -76,6 +77,7 @@ export default function AboutPage() {
               src="/images/about-mission.png"
               alt="Global Technology Partnership"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
