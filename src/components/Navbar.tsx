@@ -70,7 +70,7 @@ export function Navbar() {
                 width={200}
                 height={80}
                 priority
-                className="h-16 md:h-20 w-auto object-contain scale-125 md:scale-150 origin-left transition-transform dark:brightness-0 dark:invert dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" 
+                className="h-16 md:h-20 w-auto object-contain scale-125 md:scale-150 origin-left transition-transform" 
               />
             </Link>
           </div>

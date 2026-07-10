@@ -50,7 +50,7 @@ export default function Home() {
               alt="MuForge Logo"
               fill
               sizes="(max-width: 768px) 192px, 256px"
-              className="object-contain relative z-10 dark:brightness-0 dark:invert dark:drop-shadow-[0_0_35px_rgba(6,182,212,0.6)]"
+              className="object-contain relative z-10"
             />
           </motion.div>
 
